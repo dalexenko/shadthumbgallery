@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+
+<SCRIPT src='include/jscript.js'></SCRIPT>
+<script src="include/JsHttpRequest/JsHttpRequest.js"></script>
+<script language="JavaScript">
+  // Функция вызывается при нажатии на кнопку.
+  function test(t, f) {
+    JsHttpRequest.query(
+      'jstest.php', // путь к backend-скрипту
+      {
+        // передаем текстовые данные
+        'id': t,
+        // передаем файл для закачки
+        'rt': f
+      },
+      // Функция-обработчик, вызывается при ответе сервера.
+      function(result, errors) {
+        // Вывести отладочные сообщения (если нужно).
+        document.getElementById("debug").innerHTML = errors;
+        // Вывести результат работы.
+        document.getElementById("ans").innerHTML = result;
+      }
+    );
+  }
+</script>
+ </HEAD>
+
+ <BODY>
+<a href='#' style='cursor: hand' onclick=test('9','7');>hhhhh</a>
+<table border=1>
+<tr>
+<td>
+<div id="debug">
+  Результат работы отобразится в этом блоке.
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div id="ans">
+  Отладочные сообщения отобразятся в этом блоке.
+</div>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

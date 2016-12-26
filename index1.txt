@@ -1,0 +1,2 @@
+http://localhost/shadthumbgallery/gallery_with_shadow_thumbs_new.php?dir=333&bg=13&act=NULL
+http://localhost/shadthumbgallery/gallery_with_shadow_thumbs_new.php?dir=333&bg=24&act=NULL
